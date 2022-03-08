@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trait Generator AM 2022</title>
+</head>
+
+<body>
+    <main>
+        <h1>Character Generator</h1>
+        <h3>Select your race and class and generate three random abilities</h3>
+        <label for="raceSelect">Choose A Race:</label>
+        <select name="races" id="raceSelect">
+            <option value="">Please Choose One</option>
+            <option value="Elf">Elf</option>
+            <option value="Orc">Orc</option>
+            <option value="Human">Human</option>
+            <option value="Halfling">Halfling</option>
+        </select>
+        <div></div>
+        <select name="classes" id="classSelect"></select>
+        <!--add onlick event with button where 3 randomized abilities are pulled from array list using Math.floor, depending on race and class selected previously-->
+        <div id="abilities"></div>
+
+        <h1>
+            Glossary
+        </h1>
+        <p>A guide to the terms and phrases used on this site</p>
+        <h3>
+            Races
+        </h3>
+        <!--Add image slideshow here-->
+        <section class="raceSlideshow">
+            <img class="slideshow" src="https://cdn.pixabay.com/photo/2020/10/08/00/33/orc-5636526_1280.png" alt="Orc">
+            <img class="slideshow" src="https://cdn.pixabay.com/photo/2021/09/03/22/23/elf-6596691_1280.png"
+                alt="Halfling">
+            <img class="slideshow"
+                src="https://www.maxpixel.net/static/photo/1x/People-Fantasy-Face-Male-Man-Guy-Elf-Model-5389055.png"
+                alt="Elf">
+            <img class="slideshow"
+                src="https://www.maxpixel.net/static/photo/1x/Fighter-Soldier-Man-Sword-Warrior-Armor-Fantasy-5636538.png"
+                alt="Human">
+            <button class="w3-button w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
+            <button class="w3-button w3-display-right" onclick="plusDivs(+1)">&#10095;</button>
+        </section>
+        <ul>
+            <li>
+                Elf:
+            </li>
+            <li>
+                Human:
+            </li>
+            <li>
+                Orc:
+            </li>
+            <li>
+                Halfling:
+            </li>
+        </ul>
+        <h3>
+            Classes
+        </h3>
+        <!--add image slideshow here-->
+        <p>
+        <ul>
+            <li>
+                Mage:
+            </li>
+            <li>
+                Druid:
+            </li>
+            <li>
+                Ranger:
+            </li>
+            <li>
+                Thief:
+            </li>
+            <li>
+                Berserker:
+            </li>
+            <li>
+                Knight:
+            </li>
+            <li>
+                Bard:
+            </li>
+            <li>
+                Priest:
+            </li>
+        </ul>
+        </p>
+        <h3>
+            Abilities
+        </h3>
+        <p>
+            Athletics: physical abilities or strength <br>
+            Stealth: moving undetected or remaining concealed <br>
+            Acrobatics: spectacular gymnastic feats <br>
+            Deception: ability to mislead <br>
+            Intimidation: inducing fear or awe <br>
+            Persuasion: convince through reasoning or temptation <br>
+            Arcana: spellcasting and magical ability <br>
+            Lore: knowledge of history, legend, people, and events <br>
+            Religion: rituals, prayers, and divine knowledge <br>
+            Perception: intuitive understanding; sensory interpretation <br>
+            Survival: the skill of sustaining oneself in the wild <br>
+            Healing: restore health through medicine or magic <br>
+            Nature: knowledge of the natural environment <br>
+            Endurance: sustained physical stamina <br>
+
+        </p>
+    </main>
+    <script>
+        var slideIndex = 1;
+        showDivs(slideIndex);
+
+        function plusDivs(n) {
+            showDivs(slideIndex += n);
+        }
+
+        function showDivs(n) {
+            var i;
+            var x = document.getElementsByClassName("slideshow");
+            if (n > x.length) { slideIndex = 1 }
+            if (n < 1) { slideIndex = x.length };
+            for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none";
+            }
+            x[slideIndex - 1].style.display = "block";
+        }
+    </script>
+    </main>
+</body>
+
+</html>
