@@ -1,12 +1,36 @@
 body {
-    background-color: cornsilk;
+    background-color: whitesmoke;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+header {
+    background-color: darkslategrey;
+    color: linen;
+    text-shadow: 2px 2px 5px lightslategrey;
+    border-radius: 5px;
+    padding: 0.2% 1%;
+    margin: 1%;
+}
+
+h3 {
+    background-color: darkslategrey;
+    color: linen;
+    text-shadow: 2px 2px 5px lightslategrey;
+    border-radius: 4px;
+    padding: 0.2% 1%;
+    margin: 1%;
 }
 
 select {
     background-color: dimgrey;
 }
 
-output {
+.output {
     background-color: white;
+    border-radius: 5px;
+}
+
+.slideshow {
+    max-height: 21em;
+    max-width: fit-content;
 }
