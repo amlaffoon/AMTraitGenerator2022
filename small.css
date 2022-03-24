@@ -2,6 +2,13 @@
 .container {
     display: grid;
     grid-template-areas: 
+
+    /* this will display the grid defined in small aka mobile view. just one column, one row.
+    .header {
+        grid-area: hd;
+    }
+    
+    */
     "";
 }
 }

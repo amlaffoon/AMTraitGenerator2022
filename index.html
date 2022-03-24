@@ -12,18 +12,18 @@
     <link rel="stylesheet" href="large.css">
 </head>
 
-<body>
+<body class="entireGrid">
     <main>
-        <header>
+        <header class="part1">
             <!--header-->
             <h1>Character Generator</h1>
             <h3>Select your race and class and generate three random abilities</h3>
             <!--header-->
         </header>
         <!--select/drop-->
-        <main>
+        <article>
             <label for="raceSelect">Choose A Race:</label>
-            <select name="races" id="raceSelect">
+            <select class="select1" name="races" id="raceSelect">
                 <option value="">Please Choose One</option>
                 <option value="Elf">Elf</option>
                 <option value="Orc">Orc</option>
@@ -31,17 +31,17 @@
                 <option value="Halfling">Halfling</option>
             </select>
             <!--select/drop-->
-            <select name="classes" id="classSelect"></select>
+            <select class="select2" name="classes" id="classSelect"></select>
             <!--select/drop-->
             <!--add onlick event with button where 3 randomized abilities are pulled from array list using Math.floor, depending on race and class selected previously-->
             <button>Generate Abilities</button>
             <!--text-->
-            <div class="output" id="abilities"></div>
+            <div class="textoutput" id="abilities"></div>
             <!--text-->
-        </main>
+        </article>
         <aside>
             <!--header2-->
-            <h1>
+            <h1 class="part2">
                 Glossary
             </h1>
             <p>A guide to the terms and phrases used on this site</p>
@@ -60,7 +60,7 @@
             <!--slideshow1-->
 
             <!--text1-->
-            <ul>
+            <ul class="racelist">
                 <li>
                     Elf:
                 </li>
@@ -90,7 +90,7 @@
             <!--slideshow2-->
             <p>
                 <!--text2-->
-            <ul>
+            <ul class="classlist">
                 <li>
                     Mage:
                 </li>
@@ -139,7 +139,7 @@
             <h3>
                 Abilities
             </h3>
-            <p>
+            <p class="glossary">
                 <b>Athletics:</b> physical abilities or strength <br>
                 <b>Stealth:</b> moving undetected or remaining concealed <br>
                 <b>Acrobatics:</b> spectacular gymnastic feats <br>
@@ -160,7 +160,7 @@
             <script src="myScript.js"></script>
             <script src="slideshow.js"></script>
         </aside>
-
+        <!-- add a footer -->
 
 </body>
 
