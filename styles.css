@@ -1,126 +1,29 @@
-body {
-    display: flex;
-    flex-direction: column;
-    background-color: whitesmoke;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-}
-
-header {
-    background-color: darkslategrey;
-    color: linen;
-    text-shadow: 2px 2px 5px lightslategrey;
-    border-radius: 5px;
-    padding: 0.2% 1%;
-    margin: 1%;
-}
-
-h3 {
-    background-color: darkslategrey;
-    color: linen;
-    text-shadow: 2px 2px 5px lightslategrey;
-    border-radius: 4px;
-    padding: 0.2% 1%;
-    margin: 1%;
-}
-
-select {
-    background-color: dimgrey;
-}
-
-.output {
-    background-color: white;
-    border-radius: 5px;
-}
-
 .slideshow {
     max-height: 21em;
     max-width: fit-content;
     display: block;
 }
 
-
-header { grid-area: part1; }
-.select1 { grid-area: select1; }
-.select2 {grid-area: select2;}
-.textoutput {grid-area: textoutput;}
-.part2 {grid-area: part2;}
-#raceSlideshowImage {grid-area: slideshow1;}
-.racelist {grid-area: racelist;}
-#classSlideshowImage {grid-area: slideshow2;}
-.classlist {grid-area: classlist;}
-#glossarySlideshowImage {grid-area: slideshow3;}
-.glossary {grid-area: glossary;}
-footer {grid-area: footer;}
-
-.part1,
-.select1,
-.select2,
-.textoutput,
-.part2,
-#raceSlideshowImage,
-.racelist,
-#classSlideshowImage,
-.classlist,
-.slideshow,
-#glossarySlideshowImage,
-footer {
-    background-color: ; 
+.slideshowContainer {
     display: flex;
-    flex-direction: column;
+
 }
 
 @media only screen and (min-width: 560px) {
-    .entireGrid {
-        display: grid;
-        grid-template-areas: "part1"
-                            "select1"
-                            "select2"
-                            "textoutput"
-                            "part2"
-                            "slideshow1"
-                            "racelist"
-                            "slideshow2"
-                            "classlist"
-                            "slideshow3"
-                            "glossary"
-                            "footer";
-        grid-template-rows: 100%;
-        grid-template-columns: auto;
-        align-items: center;
-        justify-content: center;}
-    }
-    
-
-        @media only screen and (min-width: 768px) {
-            .entireGrid {
-                display: grid;
-                grid-template-areas: "part1 part2"
-                                    "select1 select2"
-                                    "textoutput textoutput"
-                                    "part2 part2"
-                                    "slideshow1 racelist"
-                                    "slideshow2 classlist"
-                                    "slideshow3 glossary"
-                                    "footer footer";
-                grid-template-rows: 10em;
-                grid-template-columns: 10em;
-                align-items: center;
-                justify-content: center;
-            }
-        }
+   .slideshowContainer {
+       flex-direction: column;
+       align-content: center;
+        justify-content: center;
+        align-items: flex-start;
+        flex-wrap: wrap;
+   }
+}
       
 
-        @media only screen and (min-width: 992px) {
-            .entireGrid {
-                display: grid;
-                grid-template-areas: "part1 part1 part1"
-                                    "select1 select1 textoutput"
-                                    "slideshow1 slideshow2 slideshow3"
-                                    "racelist classlist glossary"
-                                    "footer footer footer";
-                grid-template-rows: ;
-                grid-template-columns: ;
-                align-items: center;
-                justify-content: center;
-            }
-        }
+@media only screen and (min-width: 992px) {
+    .slideshowContainer {
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+ }
