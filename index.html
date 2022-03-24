@@ -5,163 +5,164 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Trait Generator AM 2022</title>
+    <title>AM Trait Generator</title>
     <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="small.css">
-    <link rel="stylesheet" href="medium.css">
-    <link rel="stylesheet" href="large.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
 </head>
 
-<body class="entireGrid">
+<body>
     <main>
-        <header class="part1">
-            <!--header-->
-            <h1>Character Generator</h1>
-            <h3>Select your race and class and generate three random abilities</h3>
-            <!--header-->
+        Main
+
+        <!-- Header -->
+        <header>
+            Header
         </header>
-        <!--select/drop-->
-        <article>
-            <label for="raceSelect">Choose A Race:</label>
-            <select class="select1" name="races" id="raceSelect">
-                <option value="">Please Choose One</option>
-                <option value="Elf">Elf</option>
-                <option value="Orc">Orc</option>
-                <option value="Human">Human</option>
-                <option value="Halfling">Halfling</option>
-            </select>
-            <!--select/drop-->
-            <select class="select2" name="classes" id="classSelect"></select>
-            <!--select/drop-->
-            <!--add onlick event with button where 3 randomized abilities are pulled from array list using Math.floor, depending on race and class selected previously-->
-            <button>Generate Abilities</button>
-            <!--text-->
-            <div class="textoutput" id="abilities"></div>
-            <!--text-->
-        </article>
-        <aside>
-            <!--header2-->
-            <h1 class="part2">
-                Glossary
-            </h1>
-            <p>A guide to the terms and phrases used on this site</p>
-            <!--header2-->
-            <h3>
-                Races
-            </h3>
-            <!--slideshow1-->
-            <section>
-                <img id="raceSlideshowImage" class="slideshow"
-                    src="https://cdn.pixabay.com/photo/2020/10/08/00/33/orc-5636526_1280.png" alt="Orc">
-                <button class="w3-button w3-display-left" onclick="previous(raceSlideshow)">&#10094;</button>
-                <button class="w3-button w3-display-right" onclick="next(raceSlideshow)">&#10095;</button>
-            </section>
 
-            <!--slideshow1-->
+        <section class="section">
+            <div class="container">
+                <h1 class="title">
+                    Trait Generator with two dropdown lists
+                </h1>
 
-            <!--text1-->
-            <ul class="racelist">
-                <li>
-                    Elf:
-                </li>
-                <li>
-                    Human:
-                </li>
-                <li>
-                    Orc:
-                </li>
-                <li>
-                    Halfling:
-                </li>
-            </ul>
-            <!--text1-->
-            <h3>
-                Classes
-            </h3>
-            <!--slideshow2-->
-            <section>
-                <img id="classSlideshowImage" class="slideshow"
-                    src="https://cdn.pixabay.com/photo/2018/10/03/16/42/fantasy-3721894_1280.jpg" alt="Warrior">
 
-                <button class="w3-button w3-display-left" onclick="previous(classSlideshow)">&#10094;</button>
-                <button class="w3-button w3-display-right" onclick="next(classSlideshow)">&#10095;</button>
-            </section>
+                <div class="select">
+                    <select name="races" id="raceSelect">
+                        <option value="">Select a Race</option>
+                        <option value="Elf">Elf</option>
+                        <option value="Orc">Orc</option>
+                        <option value="Human">Human</option>
+                        <option value="Halfling">Halfling</option>
+                    </select>
+                </div>
+                <!--select/drop-->
 
-            <!--slideshow2-->
-            <p>
-                <!--text2-->
-            <ul class="classlist">
-                <li>
-                    Mage:
-                </li>
-                <li>
-                    Druid:
-                </li>
-                <li>
-                    Ranger:
-                </li>
-                <li>
-                    Thief:
-                </li>
-                <li>
-                    Berserker:
-                </li>
-                <li>
-                    Knight:
-                </li>
-                <li>
-                    Bard:
-                </li>
-                <li>
-                    Priest:
-                </li>
-            </ul>
-            <!--text2-->
+                <div class="select">
 
-            <!--slideshow3-->
-            <!-- <section class="raceSlideshow">
-                <img class="slideshow" src="https://cdn.pixabay.com/photo/2020/10/08/00/33/orc-5636526_1280.png"
-                    alt="Orc">
-                <img class="slideshow" src="https://cdn.pixabay.com/photo/2021/09/03/22/23/elf-6596691_1280.png"
-                    alt="Halfling">
-                <img class="slideshow"
-                    src="https://www.maxpixel.net/static/photo/1x/People-Fantasy-Face-Male-Man-Guy-Elf-Model-5389055.png"
-                    alt="Elf">
-                <img class="slideshow"
-                    src="https://www.maxpixel.net/static/photo/1x/Fighter-Soldier-Man-Sword-Warrior-Armor-Fantasy-5636538.png"
-                    alt="Human">
-                <button class="w3-button w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
-                <button class="w3-button w3-display-right" onclick="plusDivs(+1)">&#10095;</button>
-            </section> -->
-            <!--slideshow3-->
-            </p>
-            <!--text3-->
-            <h3>
-                Abilities
-            </h3>
-            <p class="glossary">
-                <b>Athletics:</b> physical abilities or strength <br>
-                <b>Stealth:</b> moving undetected or remaining concealed <br>
-                <b>Acrobatics:</b> spectacular gymnastic feats <br>
-                <b>Deception:</b> ability to mislead <br>
-                <b>Intimidation:</b> inducing fear or awe <br>
-                <b>Persuasion:</b> convince through reasoning or temptation <br>
-                <b>Arcana:</b> spellcasting and magical ability <br>
-                <b>Lore:</b> knowledge of history, legend, people, and events <br>
-                <b>Religion:</b> rituals, prayers, and divine knowledge <br>
-                <b>Perception:</b> intuitive understanding; sensory interpretation <br>
-                <b>Survival:</b> the skill of sustaining oneself in the wild <br>
-                <b>Healing:</b> restore health through medicine or magic <br>
-                <b></b>Nature: knowledge of the natural environment <br>
-                <b>Endurance:</b> sustained physical stamina <br>
-                <!--text3-->
-            </p>
+                    <select name="classes" id="classSelect">
+                        <option value="">Select a Class</option>
+                        <option value="Elf">Elf</option>
+                        <option value="Orc">Orc</option>
+                        <option value="Human">Human</option>
+                        <option value="Halfling">Halfling</option>
+                    </select>
+                </div>
+                <!--select/drop-->
+                <!--add onlick event with button where 3 randomized abilities are pulled from array list using Math.floor, depending on race and class selected previously-->
+                <button class="button">Generate Abilities</button>
+                <!--text-->
+                <div class="textoutput" id="abilities"></div>
+            </div>
+        </section>
 
-            <script src="myScript.js"></script>
-            <script src="slideshow.js"></script>
-        </aside>
-        <!-- add a footer -->
+        <section class="section">
+            <div class="container">
+                <h1 class="title">
+                    Race Info
+                </h1>
+                <div>
+                    <img id="raceSlideshowImage" class="slideshow"
+                        src="https://cdn.pixabay.com/photo/2020/10/08/00/33/orc-5636526_1280.png" alt="Orc">
+                    <button onclick="previous(raceSlideshow)" class="button">&#10094;</button>
+                    <button onclick="next(raceSlideshow)" class="button">&#10095;</button>
+                </div>
+                <div>
+                    <ul class="textlist">
+                        <li>
+                            Elf:
+                        </li>
+                        <li>
+                            Human:
+                        </li>
+                        <li>
+                            Orc:
+                        </li>
+                        <li>
+                            Halfling:
+                        </li>
+                    </ul>
+                </div>
+            </div>
 
+        </section>
+
+        <section class="section">
+            <div class="container is-primary">
+                <h1 class="title">
+                    Class Info
+                </h1>
+                <div>
+                    <img id="classSlideshowImage" class="slideshow"
+                        src="https://cdn.pixabay.com/photo/2018/10/03/16/42/fantasy-3721894_1280.jpg" alt="Warrior">
+
+                    <button onclick="previous(classSlideshow)" class="button">&#10094;</button>
+                    <button onclick="next(classSlideshow)" class="button">&#10095;</button>
+                </div>
+                <div>
+                    <ul class="textlist">
+                        <li>
+                            Mage:
+                        </li>
+                        <li>
+                            Druid:
+                        </li>
+                        <li>
+                            Ranger:
+                        </li>
+                        <li>
+                            Thief:
+                        </li>
+                        <li>
+                            Berserker:
+                        </li>
+                        <li>
+                            Knight:
+                        </li>
+                        <li>
+                            Bard:
+                        </li>
+                        <li>
+                            Priest:
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container">
+                <h1 class="title">
+                    Glossary
+                </h1>
+                <div class="content">
+                    <p>
+                        <b>Athletics:</b> physical abilities or strength <br>
+                        <b>Stealth:</b> moving undetected or remaining concealed <br>
+                        <b>Acrobatics:</b> spectacular gymnastic feats <br>
+                        <b>Deception:</b> ability to mislead <br>
+                        <b>Intimidation:</b> inducing fear or awe <br>
+                        <b>Persuasion:</b> convince through reasoning or temptation <br>
+                        <b>Arcana:</b> spellcasting and magical ability <br>
+                        <b>Lore:</b> knowledge of history, legend, people, and events <br>
+                        <b>Religion:</b> rituals, prayers, and divine knowledge <br>
+                        <b>Perception:</b> intuitive understanding; sensory interpretation <br>
+                        <b>Survival:</b> the skill of sustaining oneself in the wild <br>
+                        <b>Healing:</b> restore health through medicine or magic <br>
+                        <b></b>Nature: knowledge of the natural environment <br>
+                        <b>Endurance:</b> sustained physical stamina <br>
+                        <!--text3-->
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer>
+            Footer
+        </footer>
+
+    </main>
+    <script src="slideshow.js"></script>
 </body>
 
 </html>
