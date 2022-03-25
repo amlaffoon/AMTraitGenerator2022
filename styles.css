@@ -4,6 +4,29 @@
     display: block;
 }
 
+img {
+    width:  100px;
+    height: 100px;
+    object-fit: cover;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px 5px;
+    background-image: url("bg2.jpg");
+    background-size: contain;
+    background-repeat: repeat-y;
+}
+
+section {
+    background-image: url("backdrop_745.gif");
+    background-size: contain;
+    background-repeat: repeat-y;
+
+}
+
 .slideshowContainer {
     display: flex;
 
@@ -25,5 +48,8 @@
         flex-direction: row;
         justify-content: space-evenly;
         align-items: center;
+    }
+    section {
+        max-width: 80%;
     }
  }
