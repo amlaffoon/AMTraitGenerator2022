@@ -25,32 +25,35 @@
                     Trait Generator with two dropdown lists
                 </h1>
 
-
-                <div class="select">
-                    <select name="races" id="raceSelect">
-                        <option value="">Select a Race</option>
-                        <option value="Elf">Elf</option>
-                        <option value="Orc">Orc</option>
-                        <option value="Human">Human</option>
-                        <option value="Halfling">Halfling</option>
-                    </select>
+                <div class="field">
+                    <div class="control">
+                        <div class="select">
+                            <select name="races" id="raceSelect">
+                                <option value="">Select a Race</option>
+                                <option value="Elf">Elf</option>
+                                <option value="Orc">Orc</option>
+                                <option value="Human">Human</option>
+                                <option value="Halfling">Halfling</option>
+                            </select>
+                        </div>
+                    </div>
                 </div>
-                <!--select/drop-->
+                <div class="field">
+                    <div class="control">
+                        <div class="select">
+                            <select name="classes" id="classSelect">
+                                <option value="">Select a Class</option>
 
-                <div class="select">
-
-                    <select name="classes" id="classSelect">
-                        <option value="">Select a Class</option>
-                        <option value="Elf">Elf</option>
-                        <option value="Orc">Orc</option>
-                        <option value="Human">Human</option>
-                        <option value="Halfling">Halfling</option>
-                    </select>
+                            </select>
+                        </div>
+                    </div>
                 </div>
-                <!--select/drop-->
-                <!--add onlick event with button where 3 randomized abilities are pulled from array list using Math.floor, depending on race and class selected previously-->
-                <button class="button">Generate Abilities</button>
-                <!--text-->
+                <div class="field">
+                    <div class="control">
+                        <button id="generateAbilities" class="button">Generate Abilities</button>
+                    </div>
+                </div>
+
                 <div class="textoutput" id="abilities"></div>
             </div>
         </section>
@@ -161,6 +164,7 @@
 
     </main>
     <script src="slideshow.js"></script>
+    <script src="traitgenerator.js"></script>
 </body>
 
 </html>
