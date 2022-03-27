@@ -10,7 +10,14 @@ raceSelect.addEventListener("change", updateClassDropdown);
 
 classSelect.addEventListener("change", updateGenerateAbilitiesButton);
 
+generateAbilitiesButton.addEventListener("click", displayAbilityResults);
+
 function updateClassDropdown() {
+    // generate abilities button did not disable because removeAll changed value of classSelect; added if statement to disable button when changing race selection
+    if (classSelect.value !== "") {
+        generateAbilitiesButton.disabled = true;
+    }
+
     removeAll(classSelect);
 
     let newClassResult = new Option('Select a Class', '');
@@ -47,7 +54,8 @@ function updateClassDropdown() {
     else {
         classSelect.disabled = false;
     }
-    console.log(raceSelect.value)
+
+
 }
 
 function updateGenerateAbilitiesButton() {
@@ -61,6 +69,9 @@ function updateGenerateAbilitiesButton() {
     // generateAbilitiesButton.disabled = classSelect.value === ""; these are Booleans :)
 }
 
+function displayAbilityResults() {
+    console.log("hello")
+}
 
 function removeAll(selectBox) {
     while (selectBox.options.length > 0) {
