@@ -83,6 +83,17 @@ function displayAbilityResults() {
     let selectedAbilities = [abilityArray.pop(), abilityArray.pop(), abilityArray.pop()];
     console.log(selectedAbilities);
 
+    let displayAbilities = document.getElementById("abilities");
+
+    displayAbilities.innerHTML = "";
+
+    for (let item of selectedAbilities) {
+        const node = document.createElement("li");
+        const textnode = document.createTextNode(item);
+        node.appendChild(textnode);
+        displayAbilities.appendChild(node);
+    }
+
 }
 
 function shuffle(array) {
