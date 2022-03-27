@@ -57,6 +57,8 @@ function updateGenerateAbilitiesButton() {
     else {
         generateAbilitiesButton.disabled = false;
     }
+
+    // generateAbilitiesButton.disabled = classSelect.value === ""; these are Booleans :)
 }
 
 
