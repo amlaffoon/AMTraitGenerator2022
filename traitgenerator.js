@@ -55,7 +55,6 @@ function updateClassDropdown() {
         classSelect.disabled = false;
     }
 
-
 }
 
 function updateGenerateAbilitiesButton() {
@@ -70,7 +69,24 @@ function updateGenerateAbilitiesButton() {
 }
 
 function displayAbilityResults() {
-    console.log("hello")
+    let abilityArray;
+
+    if (classSelect.value === "Ranger") {
+        abilityArray = ["Athletics", "Nature", "Perception", "Stealth", "Survival"];
+    }
+
+    if (classSelect.value === "Warrior") {
+        abilityArray = ["Athletics", "Healing", "Intimidation", "Religion", "Survival"];
+    }
+
+    shuffle(abilityArray);
+    let selectedAbilities = [abilityArray.pop(), abilityArray.pop(), abilityArray.pop()];
+    console.log(selectedAbilities);
+
+}
+
+function shuffle(array) {
+    array.sort(() => Math.random() - 0.5);
 }
 
 function removeAll(selectBox) {
