@@ -4,7 +4,11 @@ const raceSelect = document.getElementById("raceSelect");
 
 const classSelect = document.getElementById("classSelect");
 
-raceSelect.addEventListener("change", updateClassDropdown)
+const generateAbilitiesButton = document.getElementById("generateAbilities");
+
+raceSelect.addEventListener("change", updateClassDropdown);
+
+classSelect.addEventListener("change", updateGenerateAbilitiesButton);
 
 function updateClassDropdown() {
     removeAll(classSelect);
@@ -45,6 +49,16 @@ function updateClassDropdown() {
     }
     console.log(raceSelect.value)
 }
+
+function updateGenerateAbilitiesButton() {
+    if (classSelect.value === "") {
+        generateAbilitiesButton.disabled = true;
+    }
+    else {
+        generateAbilitiesButton.disabled = false;
+    }
+}
+
 
 function removeAll(selectBox) {
     while (selectBox.options.length > 0) {
