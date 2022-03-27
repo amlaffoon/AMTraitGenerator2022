@@ -1,12 +1,12 @@
 .slideshow {
-    max-height: 21em;
-    max-width: fit-content;
-    display: block;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
 }
 
 img {
-    width:  100px;
-    height: 100px;
+    width:  15em;
+    height: 15em;
     object-fit: cover;
 }
 
@@ -51,5 +51,10 @@ section {
     }
     section {
         max-width: 80%;
+    }
+
+    img {
+        width:  27em;
+        height: 27em;
     }
  }
