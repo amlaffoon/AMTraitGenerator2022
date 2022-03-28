@@ -12,42 +12,47 @@ classSelect.addEventListener("change", updateGenerateAbilitiesButton);
 
 generateAbilitiesButton.addEventListener("click", displayAbilityResults);
 
+
+// let newClassResult = new Option('Select a Class', '');
+// classSelect.add(newClassResult, undefined);
+
 function updateClassDropdown() {
-    // generate abilities button did not disable because removeAll changed value of classSelect; added if statement to disable button when changing race selection
     if (classSelect.value !== "") {
         generateAbilitiesButton.disabled = true;
     }
 
     removeAll(classSelect);
 
-    let newClassResult = new Option('Select a Class', '');
-    classSelect.add(newClassResult, undefined);
+    let classesOption;
+
+    if (raceSelect.value === "") {
+        classesOption.disabled = true;
+    }
 
     if (raceSelect.value === "Elf") {
-        let elfClass = new Option("Ranger", "Ranger");
-        classSelect.add(elfClass, undefined);
+        classesOption = ["Select an Option", "Mage", "Druid", "Ranger", "Thief", "Bard"];
     }
-    if (raceSelect.value === "Orc") {
-        let orcClass = new Option("Knight", "Knight");
-        classSelect.add(orcClass, undefined);
-    }
-    if (raceSelect.value === "Halfling") {
-        let halflingClass = new Option("Healer", "Healer");
-        classSelect.add(halflingClass, undefined);
-    }
+
     if (raceSelect.value === "Human") {
-        let humanClass = new Option("Mage", "Mage");
-        classSelect.add(humanClass, undefined);
-
-        // classSelect.add(new Option("Mage", "Mage"), undefined);
-
-        // let humanClasses = ["mage", "warrior", "paladin"];
-
-        // for(let classss of humanClasses) {
-        //     let option = new Option(classs, classss);
-        //     classSelect.add(option, undefined);
-        // }
+        classesOption = ["Select an option", "Thief", "Berserker", "Knight", "Bard", "Priest"];
     }
+
+    if (raceSelect.value === "Halfling") {
+        classesOption = ["Select an option", "Mage", "Druid", "Ranger", "Priest"];
+    }
+
+    if (raceSelect.value === "Orc") {
+        classesOption = ["Select an option", "Mage", "Ranger", "Berserker", "Knight", "Priest"];
+    }
+
+    for (let choice of classesOption) {
+        const node = document.createElement("option");
+        const textnode = document.createTextNode(choice);
+        node.value = choice;
+        node.appendChild(textnode);
+        classSelect.appendChild(node);
+    }
+
     if (raceSelect.value === "") {
         classSelect.disabled = true;
     }
