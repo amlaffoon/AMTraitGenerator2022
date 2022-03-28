@@ -28,7 +28,7 @@ function updateClassDropdown() {
         classSelect.add(elfClass, undefined);
     }
     if (raceSelect.value === "Orc") {
-        let orcClass = new Option("Warrior", "Warrior");
+        let orcClass = new Option("Knight", "Knight");
         classSelect.add(orcClass, undefined);
     }
     if (raceSelect.value === "Halfling") {
@@ -75,9 +75,34 @@ function displayAbilityResults() {
         abilityArray = ["Athletics", "Nature", "Perception", "Stealth", "Survival"];
     }
 
-    if (classSelect.value === "Warrior") {
+    if (classSelect.value === "Knight") {
         abilityArray = ["Athletics", "Healing", "Intimidation", "Religion", "Survival"];
     }
+
+    if (classSelect.value === "Mage") {
+        abilityArray = ["Arcana", "Deception", "Healing", "Lore", "Nature", "Perception"];
+    }
+
+    if (classSelect.value === "Druid") {
+        abilityArray = ["Arcana", "Healing", "Nature", "Religion", "Survival"];
+    }
+
+    if (classSelect.value === "Priest") {
+        abilityArray = ["Endurace", "Healing", "Lore", "Perception", "Persuasion", "Religion"];
+    }
+
+    if (classSelect.value === "Berserker") {
+        abilityArray = ["Athletics", "Endurance", "Intimidation", "Nature", "Survival"];
+    }
+
+    if (classSelect.value === "Thief") {
+        abilityArray = ["Acrobatics", "Deception", "Persuasion", "Stealth", "Survival"];
+    }
+
+    if (classSelect.value === "Bard") {
+        abilityArray = ["Acrobatics", "Arcana", "Deception", "Lore", "Persuasion"];
+    }
+
 
     shuffle(abilityArray);
     let selectedAbilities = [abilityArray.pop(), abilityArray.pop(), abilityArray.pop()];
