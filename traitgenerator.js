@@ -13,10 +13,6 @@ classSelect.addEventListener("change", updateGenerateAbilitiesButton);
 generateAbilitiesButton.addEventListener("click", displayAbilityResults);
 
 
-// let newClassResult = new Option('Select a Class', '');
-// classSelect.add(newClassResult, undefined);
-//logic for blank or no option selected yet
-
 function updateClassDropdown() {
     if (classSelect.value !== "") {
         generateAbilitiesButton.disabled = true;
@@ -31,26 +27,32 @@ function updateClassDropdown() {
     }
 
     if (raceSelect.value === "Elf") {
-        classesOption = ["Select an Option", "Mage", "Druid", "Ranger", "Thief", "Bard"];
+        classesOption = ["Mage", "Druid", "Ranger", "Thief", "Bard"];
     }
 
     if (raceSelect.value === "Human") {
-        classesOption = ["Select an option", "Thief", "Berserker", "Knight", "Bard", "Priest"];
+        classesOption = ["Thief", "Berserker", "Knight", "Bard", "Priest"];
     }
 
     if (raceSelect.value === "Halfling") {
-        classesOption = ["Select an option", "Mage", "Druid", "Ranger", "Priest"];
+        classesOption = ["Mage", "Druid", "Ranger", "Priest"];
     }
 
     if (raceSelect.value === "Orc") {
-        classesOption = ["Select an option", "Mage", "Ranger", "Berserker", "Knight", "Priest"];
+        classesOption = ["Mage", "Ranger", "Berserker", "Knight", "Priest"];
     }
 
+    const node = document.createElement("option"); // <option></option>
+    const textnode = document.createTextNode("Select a Class"); // <option></option>
+    node.value = ""; // <option value="Mage"></option>
+    node.appendChild(textnode); // <option value="Mage">Mage</option>
+    classSelect.appendChild(node);
+
     for (let choice of classesOption) {
-        const node = document.createElement("option");
-        const textnode = document.createTextNode(choice);
-        node.value = choice;
-        node.appendChild(textnode);
+        const node = document.createElement("option"); // <option></option>
+        const textnode = document.createTextNode(choice); // <option></option>
+        node.value = choice; // <option value="Mage"></option>
+        node.appendChild(textnode); // <option value="Mage">Mage</option>
         classSelect.appendChild(node);
     }
 
