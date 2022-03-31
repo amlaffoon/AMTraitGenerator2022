@@ -15,6 +15,7 @@ generateAbilitiesButton.addEventListener("click", displayAbilityResults);
 
 // let newClassResult = new Option('Select a Class', '');
 // classSelect.add(newClassResult, undefined);
+//logic for blank or no option selected yet
 
 function updateClassDropdown() {
     if (classSelect.value !== "") {
