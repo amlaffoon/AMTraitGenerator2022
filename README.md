@@ -2,7 +2,7 @@
 
 This is a D&D-inspired generator that allows you to choose a race and a class, then generates three random abilities from a list based on your previous choices. 
 
-<https://amlaffoon.github.io/AMTraitGenerator2022/>
+https://amlaffoon.github.io/FantasyTraitGenerator/
 <https://github.com/amlaffoon/AMTraitGenerator2022.git>
 
 Features
