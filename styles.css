@@ -6,9 +6,9 @@
 }
 
 img {
-    width: 15em;
-    height: 15em;
-    object-fit: cover;
+    max-width: 17em;
+    max-height: 17em;
+    object-fit: contain;
 }
 
 main {
@@ -20,13 +20,16 @@ main {
     background-size: contain;
     background-repeat: repeat-y;
     color: black;
+    font-family: Lucida Bright, Georgia, serif;
 }
 
-section {
+article {
+    align-items: center;
+    margin-right: auto;
+    margin-left: auto;
     background-image: url("backdrop_745.gif");
     background-size: contain;
     background-repeat: repeat-y;
-
 }
 
 ul {
@@ -64,7 +67,7 @@ ul {
         align-items: center;
     }
 
-    section {
+    article {
         max-width: 80%;
     }
 

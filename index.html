@@ -11,156 +11,177 @@
 </head>
 
 <body>
+
+
     <main>
         <!-- Main -->
 
         <header>
+            <nav id="top" class="tabs">
+                <ul>
+                    <li>
+                        <a class="has-text-white" href="#table">Character Generator</a>
+                    </li>
+                    <li>
+                        <a class="has-text-white" href="#race-section">Races</a>
+                    </li>
+                    <li>
+                        <a class="has-text-white" href="#class-section">Classes</a>
+                    </li>
+                    <li>
+                        <a class="has-text-white" href="#glossary">Glossary</a>
+                    </li>
+                </ul>
+            </nav>
             <!-- Header -->
         </header>
 
-        <section class="section">
-            <div class="container">
-                <h1 class="title">
-                    Fantasy Character Trait Generator
-                </h1>
+        <article>
 
-                <div class="traitgenform">
-                    <div class="field">
-                        <div class="control">
-                            <div class="select is-fullwidth">
-                                <select name="races" id="raceSelect">
-                                    <option value="">Select a Race</option>
-                                    <option value="Elf">Elf</option>
-                                    <option value="Orc">Orc</option>
-                                    <option value="Human">Human</option>
-                                    <option value="Halfling">Halfling</option>
-                                </select>
+            <section class="section">
+                <div class="container">
+                    <h1 class="title">
+                        Fantasy Character Trait Generator
+                    </h1>
+
+                    <div class="traitgenform">
+                        <div class="field">
+                            <div class="control">
+                                <div class="select is-fullwidth">
+                                    <select name="races" id="raceSelect">
+                                        <option value="">Select a Race</option>
+                                        <option value="Elf">Elf</option>
+                                        <option value="Orc">Orc</option>
+                                        <option value="Human">Human</option>
+                                        <option value="Halfling">Halfling</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="field">
+                            <div class="control">
+                                <div class="select is-fullwidth">
+                                    <select name="classes" id="classSelect" disabled>
+                                        <option value="">Select an Option</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="field">
+                            <div class="control">
+                                <button id="generateAbilities" class="button is-fullwidth" disabled>Generate
+                                    Abilities</button>
                             </div>
                         </div>
                     </div>
-                    <div class="field">
-                        <div class="control">
-                            <div class="select is-fullwidth">
-                                <select name="classes" id="classSelect" disabled>
-                                    <option value="">Select an Option</option>
-                                </select>
-                            </div>
+
+                    <div class="textoutput">
+                        <ul class="box" id="abilities"></ul>
+                    </div>
+                </div>
+            </section>
+
+            <section id="race-section" class="section">
+                <div class="slideshowContainer">
+                    <div class="slideshow">
+                        <img id="raceSlideshowImage"
+                            src="https://cdn.pixabay.com/photo/2020/10/08/00/33/orc-5636526_1280.png" alt="Orc">
+                        <div class="slideshowButtons">
+                            <button onclick="previous(raceSlideshow)" class="button">&#10094;</button>
+                            <button onclick="next(raceSlideshow)" class="button">&#10095;</button>
                         </div>
                     </div>
-                    <div class="field">
-                        <div class="control">
-                            <button id="generateAbilities" class="button is-fullwidth" disabled>Generate
-                                Abilities</button>
+                    <div class="content">
+                        <ul class="textlist box">
+                            <li>
+                                Elf: long-lived creatures with sharp senses and magical crafts
+                            </li>
+                            <li>
+                                Human: common mortal beings given to greed
+                            </li>
+                            <li>
+                                Orc: creatures of fearsome form or aspect; warlike and strong
+                            </li>
+                            <li>
+                                Halfling: small, affable and cheerful beings
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+            </section>
+
+            <section id="class-section" class="section">
+                <div class="container slideshowContainer">
+
+                    <div class="slideshow">
+                        <img id="classSlideshowImage"
+                            src="https://cdn.pixabay.com/photo/2018/10/03/16/42/fantasy-3721894_1280.jpg" alt="Warrior">
+                        <div class="slideshowButtons">
+                            <button onclick="previous(classSlideshow)" class="button">&#10094;</button>
+                            <button onclick="next(classSlideshow)" class="button">&#10095;</button>
                         </div>
                     </div>
-                </div>
-
-                <div class="textoutput">
-                    <ul id="abilities"></ul>
-                </div>
-            </div>
-        </section>
-
-        <section class="section">
-            <div class="slideshowContainer">
-                <div class="slideshow">
-                    <img id="raceSlideshowImage"
-                        src="https://cdn.pixabay.com/photo/2020/10/08/00/33/orc-5636526_1280.png" alt="Orc">
-                    <div class="slideshowButtons">
-                        <button onclick="previous(raceSlideshow)" class="button">&#10094;</button>
-                        <button onclick="next(raceSlideshow)" class="button">&#10095;</button>
+                    <div class="content">
+                        <ul class="textlist box">
+                            <li>
+                                Mage: a master of arcane magic
+                            </li>
+                            <li>
+                                Druid: nature magic-wielders
+                            </li>
+                            <li>
+                                Ranger: skilled hunters and woodsmen text
+                            </li>
+                            <li>
+                                Thief: stealthy, skilfull problem-solvers
+                            </li>
+                            <li>
+                                Berserker:placeholder text
+                            </li>
+                            <li>
+                                Knight: devoted warriors who fight for a cause
+                            </li>
+                            <li>
+                                Bard: masters of song, speech, and magic
+                            </li>
+                            <li>
+                                Priest: religious devotees specializing in healing
+                            </li>
+                        </ul>
                     </div>
                 </div>
-                <div class="content">
-                    <ul class="textlist">
-                        <li>
-                            Elf: long-lived creatures with sharp senses and magical crafts
-                        </li>
-                        <li>
-                            Human: common mortal beings given to greed
-                        </li>
-                        <li>
-                            Orc: creatures of fearsome form or aspect; warlike and strong
-                        </li>
-                        <li>
-                            Halfling: small, affable and cheerful beings
-                        </li>
-                    </ul>
-                </div>
-            </div>
+            </section>
 
-        </section>
-
-        <section class="section">
-            <div class="container slideshowContainer">
-
-                <div class="slideshow">
-                    <img id="classSlideshowImage"
-                        src="https://cdn.pixabay.com/photo/2018/10/03/16/42/fantasy-3721894_1280.jpg" alt="Warrior">
-                    <div class="slideshowButtons">
-                        <button onclick="previous(classSlideshow)" class="button">&#10094;</button>
-                        <button onclick="next(classSlideshow)" class="button">&#10095;</button>
+            <section class="section">
+                <div class="container">
+                    <h1 class="title">
+                        Glossary
+                    </h1>
+                    <div class="content">
+                        <p id="glossary">
+                            <b>Athletics:</b> physical abilities or strength <br>
+                            <b>Stealth:</b> moving undetected or remaining concealed <br>
+                            <b>Acrobatics:</b> spectacular gymnastic feats <br>
+                            <b>Deception:</b> ability to mislead <br>
+                            <b>Intimidation:</b> inducing fear or awe <br>
+                            <b>Persuasion:</b> convince through reasoning or temptation <br>
+                            <b>Arcana:</b> spellcasting and magical ability <br>
+                            <b>Lore:</b> knowledge of history, legend, people, and events <br>
+                            <b>Religion:</b> rituals, prayers, and divine knowledge <br>
+                            <b>Perception:</b> intuitive understanding; sensory interpretation <br>
+                            <b>Survival:</b> the skill of sustaining oneself in the wild <br>
+                            <b>Healing:</b> restore health through medicine or magic <br>
+                            <b>Nature:</b> knowledge of the natural environment <br>
+                            <b>Endurance:</b> sustained physical stamina <br>
+                        </p>
                     </div>
                 </div>
-                <div class="content">
-                    <ul class="textlist">
-                        <li>
-                            Mage: a master of arcane magic
-                        </li>
-                        <li>
-                            Druid: nature magic-wielders
-                        </li>
-                        <li>
-                            Ranger: skilled hunters and woodsmen text
-                        </li>
-                        <li>
-                            Thief: stealthy, skilfull problem-solvers
-                        </li>
-                        <li>
-                            Berserker:placeholder text
-                        </li>
-                        <li>
-                            Knight: devoted warriors who fight for a cause
-                        </li>
-                        <li>
-                            Bard: masters of song, speech, and magic
-                        </li>
-                        <li>
-                            Priest: religious devotees specializing in healing
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </section>
-
-        <section class="section">
-            <div class="container">
-                <h1 class="title">
-                    Glossary
-                </h1>
-                <div class="content">
-                    <p>
-                        <b>Athletics:</b> physical abilities or strength <br>
-                        <b>Stealth:</b> moving undetected or remaining concealed <br>
-                        <b>Acrobatics:</b> spectacular gymnastic feats <br>
-                        <b>Deception:</b> ability to mislead <br>
-                        <b>Intimidation:</b> inducing fear or awe <br>
-                        <b>Persuasion:</b> convince through reasoning or temptation <br>
-                        <b>Arcana:</b> spellcasting and magical ability <br>
-                        <b>Lore:</b> knowledge of history, legend, people, and events <br>
-                        <b>Religion:</b> rituals, prayers, and divine knowledge <br>
-                        <b>Perception:</b> intuitive understanding; sensory interpretation <br>
-                        <b>Survival:</b> the skill of sustaining oneself in the wild <br>
-                        <b>Healing:</b> restore health through medicine or magic <br>
-                        <b></b>Nature: knowledge of the natural environment <br>
-                        <b>Endurance:</b> sustained physical stamina <br>
-                    </p>
-                </div>
-            </div>
-        </section>
+            </section>
+        </article>
 
         <footer>
-            Anna Marie Laffoon 1994
+            Anna Marie Laffoon
         </footer>
 
     </main>
